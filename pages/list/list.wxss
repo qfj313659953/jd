@@ -1,0 +1,96 @@
+@import '/public/fonts/font.wxss';
+/* pages/list/list.wxss */
+.click-btn {
+    margin:16rpx;
+    background:#fcedeb;
+    height: 60rpx;
+    line-height: 60rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    font-size:12px;
+    border-radius: 8rpx;
+    color:#666;
+   
+}
+.double1 {
+    width: 90rpx;
+    height: 28rpx;
+    
+}
+.list {
+    position: relative;
+    border-top:1px solid #ccc;
+}
+
+.list-item {
+    display: flex;
+    padding:10rpx 0 10rpx 20rpx;
+}
+.list-item navigator {
+    display: flex;
+}
+.list-item .list-img image {
+    width: 240rpx;
+    height: 240rpx;
+}
+.list-cnt {
+    
+    min-height: 240rpx;
+    padding: 0 20rpx 16rpx 10rpx;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+   
+}
+.list-title {
+    height: 76rpx;
+    color: #333;
+    line-height: 1.36;
+    margin-top:16rpx;
+    word-break: break-all;
+    font-size:14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.spec-li {
+    display: flex;
+}
+.word {
+    padding:0 10rpx;
+    border-radius: 2rpx;
+    font-size:10px;
+    height: 30rpx;
+    line-height: 30rpx;
+    background: #f2f2f7;
+    color: #999;
+    margin-right: 10rpx;
+
+}
+.red {
+   color: #e93b3d;
+   font-size:18px;
+
+}
+.comment {
+    display: flex;
+}
+.comment image {
+    width:48rpx;
+    height: 28rpx;
+    margin-right: 10rpx;
+}
+.gcolor {
+    color: #999;
+    font-size:12px;
+    line-height: 1.2;
+    white-space: nowrap;
+}
+
+.icon-fanhuidingbu1 {
+    font-size:28px;
+    color: #ccc;
+    position: fixed;
+    bottom:50rpx;
+    right:20rpx;
+}

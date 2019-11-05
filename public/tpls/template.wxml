@@ -1,0 +1,43 @@
+<!-- 列表模板 -->
+<template name="list">
+    <view class="list-item">
+        <navigator url="/pages/detail/detail?id={{ id }}" open-type="navigate" hover-class="none">
+            <view class="list-img">
+                <image src="{{ img }}" />
+            </view>
+            <view class="list-cnt">
+                <view class="list-title">
+                    <image class="double1" src="https://img11.360buyimg.com/jdphoto/s90x28_jfs/t1/50544/35/13798/15234/5da7cf8cEf7e5ea76/8a9fad8c8aef6121.png" />
+                    <text>{{ title }}</text>
+                </view>
+                <view class="spec-li">
+                    <block wx:for="{{ spec }}" wx:key="spec">
+                        <view class="word">{{item}}</view>
+                    </block>
+                </view>
+                <view class="red">{{ price }}</view>
+                <view class="comment gcolor">
+                    <image class="double1" src="https://img11.360buyimg.com/jdphoto/s48x28_jfs/t1/12264/37/1979/1085/5c185d6dEba7743da/c5ab4d78f8bf4d90.png" />
+                    <text>{{ comment }}</text>
+                </view>
+                <view class="gcolor">{{ shop }}></view>
+            </view>
+        </navigator>
+    </view>
+</template>
+<!-- 评价 -->
+<template name="comment">
+    <view class="comm-list">
+        <view class="comm-user">
+            
+            <view class="comm-pic">
+                <view><image src="https://img11.360buyimg.com/jdphoto/s40x40_jfs/t1/25255/18/10701/1678/5c89f892E78c04688/684d63c0d68e39b1.png" /></view> 
+               <view> {{ username }}</view>
+                </view>
+            <view class="comm-time">{{ createTime}}</view>
+        </view>
+        <view class="comm-content">
+            {{ comment }}
+        </view>
+    </view>
+</template>

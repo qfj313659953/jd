@@ -1,0 +1,75 @@
+<import src="/public/tpls/template" />
+<!-- 滚动条 -->
+<view class="banner">
+    <swiper indicator-dots="{{ true }}" autoplay="{{ true }}" interval="{{ 3000 }}" duration="{{ 1000 }}" circular="{{true}}">
+        <block wx:for="{{banner}}" wx:key="*this">
+            <swiper-item>
+                <view class="swiper-item">
+                    <image src="{{item.image}}" />
+                </view>
+            </swiper-item>
+        </block>
+    </swiper>
+</view>
+<view class="banner-img">
+    <image src="https://img30.360buyimg.com/jdphoto/jfs/t1/77621/40/13428/113573/5da86d3cE9a189ee2/3d6d245ea393c962.png" />
+</view>
+<!-- 详情 -->
+<view class="info">
+    <view class="info-top">
+        <view class="price">
+            <text>￥</text>
+            2699.00
+        </view>
+        <view class="ico">
+            <view class="iconfont icon-shoucang"></view>
+            <text>收藏</text>
+        </view>
+    </view>
+    <view class="info-1">
+        <view class="info-title">
+            <image class="double1" src="https://img11.360buyimg.com/jdphoto/s90x28_jfs/t1/50544/35/13798/15234/5da7cf8cEf7e5ea76/8a9fad8c8aef6121.png" />
+            <image class="double2" src="https://img11.360buyimg.com/jdphoto/s48x28_jfs/t1/12264/37/1979/1085/5c185d6dEba7743da/c5ab4d78f8bf4d90.png" />
+            <text>荣耀20 PRO 李现同款 4800万全焦段AI四摄  双光学防抖 麒麟980 全网通4G 8GB+128GB 冰岛幻境 拍照手机</text>
+        </view>
+        <view class="info-more">限时优惠2699！11月1-11日全程价保！荣耀爆品特惠，选品质，购荣耀~</view>
+    </view>
+</view>
+<!-- 评价 -->
+<view class="comment">
+    <scroll-view scroll-y="true" class="scroll" scroll-top="{{ scrollTop }}" scroll-with-animation="{{true}}" bindscroll="scroll">
+        <view class="comm-top">
+            <view class="top-left">
+                <view>评价</view>
+                <view class="red">
+                    好评
+                    <text>94%</text>
+                </view>
+            </view>
+            <view class="top-right">
+                <text>共  13万+ 条</text>
+            </view>
+        </view>
+        <view class="comm-all">
+            <block wx:for="{{ comments }}" wx:key="comment" wx:key="comments">
+                <template is="comment" data="{{ ...item }}" />
+            </block>
+        </view>
+    </scroll-view>
+    <!-- 返回顶部 -->
+    <view bind:tap="backtop" hidden="{{ floorstatus }}" class="iconfont icon-fanhuidingbu1"></view>
+</view>
+<!-- 底部 -->
+<view class="foot">
+    <view class="add">
+        <form bindsubmit="dopost">
+            <view class="add-comm">
+                <input type="text" placeholder="请输入评论" name="comment" />
+                <button type="warn" form-type="submit">提交评论</button>
+            </view>
+        </form>
+    </view>
+    <view class="share">
+        <button open-type="share" type="warn">分享</button>
+    </view>
+</view>

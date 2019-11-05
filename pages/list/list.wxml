@@ -1,0 +1,16 @@
+<import src="/public/tpls/template.wxml" />
+<!-- 点击筛选按钮 -->
+<view class="click-btn">
+    <text>点击筛选</text>
+    <image class="double1" src="https://img11.360buyimg.com/jdphoto/s90x28_jfs/t1/50544/35/13798/15234/5da7cf8cEf7e5ea76/8a9fad8c8aef6121.png" />
+    <text>活动商品</text>
+</view>
+
+<!-- 列表 -->
+<view class="list">
+   <block wx:for="{{ goods }}" wx:key="goods">
+         <template is="list" data="{{ ...item }}" />
+   </block>
+</view>
+<!-- 返回顶部 -->
+<view bind:tap="backtop" hidden="{{ floorstatus }}" class="iconfont icon-fanhuidingbu1"></view>
